@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  /* 2*rem = 2*12px */
+}
+
+header {
+  background-color: #4e2a84;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+header .header__logo {
+  color: white;
+  text-decoration: none;
+  font-size: 4rem;
+}
+
+header .header__nav {
+  margin: auto 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+header .header__nav ul li.header__home a {
+  color: #d21983;
+}
+header .header__nav ul,
+li,
+a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#carousel {
+  background-image: url("./../images/b3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  background-size: cover;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#carousel .carousel__bestseller h1 {
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  word-spacing: 1rem;
+}
+
+#carousel .carousel__bestseller p {
+  font-size: 1.5rem;
+  word-spacing: 2px;
+  margin: 1rem;
+}
+
+#carousel .carousel__bestseller button {
+  font-size: 1.5rem;
+  word-spacing: 2px;
+
+  background-color: #ff0e83;
+  color: white;
+  border-radius: 0.3rem;
+  padding: 0.5rem 2rem;
+  border: 1px solid white;
+  /* xuất hiện trễ */
+  transition: all 0.9s;
+}
+#carousel .carousel__bestseller {
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+#carousel .carousel__bestseller button:hover {
+  background-color: pink;
+  border: 1px solid palevioletred;
+  cursor: pointer;
+}
+
+#intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#intro .intro-item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: white;
+}
+
+#intro .intro-item.intro-traditional {
+  background-color: #4e2a84;
+}
+
+#intro .intro-item.intro-best {
+  background-color: pink;
+  grid-column: 1 / span 2;
+}
+
+#intro .intro-item.intro-creattivity {
+  background-color: palevioletred;
+}
+
+#intro .intro-item.intro-tasty {
+  background-color: #4e2a84;
+}
+
+#intro .intro-item.intro-quality {
+  background-color: #836eaa;
+}
+
+#intro .intro-item.intro-img-1 {
+  grid-column: 2 / span 2;
+}
+
+#intro .intro-item.intro-img-4 {
+  grid-column: 3 / span 2;
+}
+
+.intro-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.intro-item p {
+  font-size: 2rem;
+  padding: 2% 20%;
+  color: #ceadb9;
+}
+
+.intro-item h2 {
+  font-size: 2rem;
+}
+
+#count {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 3rem;
+}
+
+#count p {
+  margin: 1rem;
+  font-size: 2rem;
+  color: #836eaa;
+}
+#service {
+  background-image: url("./../images/s1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#service h1 {
+  text-align: center;
+}
+
+#service .service-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+#service .service-content .service-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#service .service-content button {
+  margin-top: 2rem;
+}
+
+#service .service-content img {
+  width: 25%;
+  height: 25%;
+}
+
+#service .service-content .item-img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid pink;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gallery h1 {
+  text-align: center;
+}
+
+#gallery .gallery-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#gallery .gallery-content .gallery-item.g1 {
+  grid-column: 1 / span 2;
+  position: relative;
+}
+
+#gallery .gallery-content img {
+  width: 100%;
+  height: 100%;
+}
+
+#gallery .gallery-content .g-text h3 {
+  font-size: 2rem;
+  transition: 0.5s;
+}
+
+#gallery .gallery-content .g-text h3::after {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: white;
+  margin-top: 20px;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(50px);
+}
+
+#gallery .gallery-content .g-text {
+  color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  padding: 20px;
+}
+
+#gallery .gallery-content .g-text p {
+  bottom: 30px;
+  position: absolute;
+  right: 10px;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(30px);
+}
+
+#gallery .gallery-content .gallery-item:hover p {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+#gallery .gallery-content .gallery-item:hover {
+  cursor: pointer;
+}
+
+#gallery .gallery-content .gallery-item:hover h3::after {
+  opacity: 1;
+  transform: translateY(0px);
+}
