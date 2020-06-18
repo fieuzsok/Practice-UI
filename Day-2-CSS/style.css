@@ -60,17 +60,44 @@ margin-right: 50px;
     justify-content: center;
     align-items: center;
 }
-#intro .intro-text {
+.intro-text {
     margin: 2rem 1rem;
 }
 
-#intro .intro-text img{
-   width: 50%;
-   align-items: center;
+.intro-text img.line{
+    display: block;
+    margin: auto;
+    margin-bottom: 0.5rem;
 }
 
-#intro .intro-text h3 {
+.intro-text h3 {
     font-size: 3rem;
     text-align: center;
+}
 
+#intro .intro-text p {
+    font-size: 2rem;
+    text-align: center;
+    margin: auto;
+}
+
+
+#program .program-item {
+    float: left;
+    margin-left: 2rem;
+}
+
+#program .program-title {
+    color: brown;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#program .program-detail {
+    font-size: 1.2rem;
+}
+
+#program .program-list {
+    display: flex;
+    justify-content: center;
 }
