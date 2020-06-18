@@ -1,103 +1,128 @@
-*{
- padding: 0;
- margin: 0;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 12px;
+  font-size: 12px;
 }
 
-header #logo, #slogan {
-    height: 70px;
+header #logo,
+#slogan {
+  height: 70px;
 }
-
 
 #slogan {
-float: right;
-margin-right: 50px;
+  float: right;
+  margin-right: 50px;
 }
 
 #menu-list {
-    margin: 1rem 1rem;
+  margin: 1rem 1rem;
 }
-
+#underline-main-page {
+  color: red;
+  width: 103%;
+}
 #menu ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 #menu ul li a {
- 
-   text-decoration: none;
-   color: #5f5e5e;
-   text-transform: uppercase;
-   font-size: 1.5rem;
-   font-weight: bold;
+  text-decoration: none;
+  color: #5f5e5e;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 5px;
+  padding: 0%;
 }
 
 #menu ul {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
-#menu hr {
-    height: 0.1rem;
-    border-width: 0;
-    color: #5f5e5e;
-    background-color: #5f5e5e;
-    opacity: 25%;
+#menu .cover-menu {
+  height: 0.1rem;
+  border-width: 0;
+  color: #5f5e5e;
+  background-color: #5f5e5e;
+  opacity: 25%;
 }
 
 #intro-img {
-    background-image: url(./images/slider_1.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 700px;
-    margin: 2rem 0.5rem;
+  background-image: url(./images/slider_1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  margin: 2rem 0.5rem;
 }
 
 #intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 07rem;
 }
 .intro-text {
-    margin: 2rem 1rem;
+  margin: 2rem 1rem;
 }
 
-.intro-text img.line{
-    display: block;
-    margin: auto;
-    margin-bottom: 0.5rem;
+.intro-text img.line {
+  display: block;
+  margin: auto;
+  margin-bottom: 0.5rem;
 }
 
 .intro-text h3 {
-    font-size: 3rem;
-    text-align: center;
+  font-size: 3rem;
+  text-align: center;
 }
 
 #intro .intro-text p {
-    font-size: 2rem;
-    text-align: center;
-    margin: auto;
+  font-size: 2rem;
+  text-align: center;
+  margin: auto;
 }
 
-
 #program .program-item {
-    float: left;
-    margin-left: 2rem;
+  float: left;
+  margin-left: 2rem;
 }
 
 #program .program-title {
-    color: brown;
-    font-size: 1.5rem;
-    text-transform: uppercase;
+  color: brown;
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 #program .program-detail {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 #program .program-list {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+#news {
+  margin-top: 07rem;
+}
+
+#news .news-list .div-50,
+.div-50-25 {
+  width: 50%;
+  float: left;
+}
+
+#news .news-list .div-50 .div-50-25 img {
+  width: 100%;
+  height: 300px;
+}
+
+#news .news-list .div-50 img {
+  width: 100%;
+  height: 600px;
 }
