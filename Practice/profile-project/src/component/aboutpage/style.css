@@ -1,0 +1,20 @@
+.about-detail {
+  display: flex;
+  padding: 10px 0;
+}
+
+.avatar {
+  width: calc(100% - 70%);
+  height: calc(100% - 70%);
+  margin-right: 20px;
+}
+
+.container p {
+  margin: 5px 0;
+  text-align: justify;
+}
+
+.about-detail h3 {
+  font-size: 2rem;
+  color: #173b6c;
+}

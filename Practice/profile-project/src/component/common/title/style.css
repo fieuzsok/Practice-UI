@@ -1,0 +1,15 @@
+#title {
+  margin: 15px 0;
+}
+#title h1 {
+  color: #173b6c;
+  display: inline;
+}
+
+#title h1:after {
+  content: ""; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  width: 3rem; /* Change this to whatever width you want. */
+  border-bottom: 4px solid #149ddd; /* This creates the border. Replace black with whatever color you want. */
+  padding-bottom: 10px;
+}
