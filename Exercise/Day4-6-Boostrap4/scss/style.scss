@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+
+    &.info-left-side {
+        .phone-info {
+            margin: 0 50px 0 0;
+        }
+    }
+
+    &.info-right-side {
+        margin-left: auto;
+    }
+}
