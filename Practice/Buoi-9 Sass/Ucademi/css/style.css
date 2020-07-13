@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12px; }
+
+#header .col-sm-7 img {
+  max-width: 150px;
+  max-height: 150px; }
+#header .col-sm-7.menu-left,
+#header .col-sm-7 .category {
+  display: flex;
+  align-items: center; }
+#header .col-sm-7 .category {
+  flex-grow: 1; }
+#header .col-sm-7 form {
+  flex-grow: 5; }
+  #header .col-sm-7 form .my-group-serach {
+    margin: 0 !important;
+    border: 1px solid #eeeeee;
+    border-radius: 0.25rem; }
+  #header .col-sm-7 form #search {
+    border: transparent; }
+  #header .col-sm-7 form i {
+    background-color: white;
+    padding: 13px;
+    color: red;
+    border-right: 1px solid #eeeeee;
+    border-radius: 0.25rem;
+    cursor: pointer; }
+    #header .col-sm-7 form i:hover {
+      background-color: red;
+      color: white; }
+  #header .col-sm-7 form .form-control:focus {
+    box-shadow: none; }
+#header .col-sm-7 a {
+  flex-grow: 1; }
+#header .col-sm-5 {
+  display: flex;
+  align-items: center; }
+  #header .col-sm-5 .login, #header .col-sm-5 .sign-up {
+    padding: 10px 20px;
+    background-color: white;
+    margin: 0 10px;
+    border: 1px solid black;
+    font-size: 1rem; }
+  #header .col-sm-5 .sign-up {
+    background-color: red;
+    border: 1px solid red;
+    color: white; }
+
+#carousel {
+  background-image: url("../img/cover.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px; }
+  #carousel .container {
+    width: 40%;
+    height: 100%;
+    color: white;
+    display: contents;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-left: 186px; }
+    #carousel .container p {
+      color: #eeeeee;
+      font-size: 1rem; }
+    #carousel .container form .my-group-serach {
+      margin: 0 !important;
+      border: 1px solid #eeeeee;
+      border-radius: 0.25rem; }
+    #carousel .container form #search {
+      border: transparent; }
+    #carousel .container form i {
+      background-color: white;
+      padding: 13px;
+      color: red;
+      border-right: 1px solid #eeeeee;
+      border-radius: 0.25rem;
+      cursor: pointer; }
+      #carousel .container form i:hover {
+        background-color: red;
+        color: white; }
+    #carousel .container form .form-control:focus {
+      box-shadow: none; }
+
+/*# sourceMappingURL=style.css.map */

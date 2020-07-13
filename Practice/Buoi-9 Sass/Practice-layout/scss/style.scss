@@ -1,0 +1,27 @@
+@mixin commonStyle($bg, $widthSize) {
+  background-color: $bg;
+  text-align: center;
+  padding: 50px 0;
+  width: $widthSize;
+}
+.header {
+  background-color: red;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.footer {
+  background-color: blue;
+  @extend .header;
+}
+
+.body {
+  display: flex;
+  width: 100%;
+  .content {
+    @include commonStyle(green, 80%);
+  }
+  .content-right {
+    @include commonStyle(aqua, 20%);
+  }
+}

@@ -1,0 +1,72 @@
+//variable first
+@import "./helper/variable";
+@import "./helper/mixin";
+@import "./base/reset";
+@import "./components/header";
+@import "./components/carousel";
+@import "./layout/home";
+
+#header {
+  .col-sm-7 {
+    img {
+      max-width: 150px;
+      max-height: 150px;
+    }
+    &.menu-left,
+    .category {
+      @include displayFlexCenter();
+    }
+    .category {
+      flex-grow: 1;
+    }
+    form {
+      flex-grow: 5;
+
+      @include styleForSearchInput();
+    }
+    a {
+      flex-grow: 1;
+    }
+  }
+  .col-sm-5 {
+    @include displayFlexCenter();
+
+    .login {
+      padding: 10px 20px;
+      background-color: white;
+      margin: 0 10px;
+      border: 1px solid black;
+      font-size: 1rem;
+    }
+    .sign-up {
+      @extend .login;
+      background-color: red;
+      border: 1px solid red;
+      color: white;
+    }
+  }
+}
+#carousel {
+  background-image: url("../img/cover.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  .container {
+    width: 40%;
+    height: 100%;
+    color: white;
+    display: contents;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-left: 186px;
+    p {
+      color: #eeeeee;
+      font-size: 1rem;
+    }
+    form {
+      @include styleForSearchInput();
+    }
+  }
+}

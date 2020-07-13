@@ -1,0 +1,23 @@
+.header, .footer {
+  background-color: red;
+  text-align: center;
+  padding: 50px 0; }
+
+.footer {
+  background-color: blue; }
+
+.body {
+  display: flex;
+  width: 100%; }
+  .body .content {
+    background-color: green;
+    text-align: center;
+    padding: 50px 0;
+    width: 80%; }
+  .body .content-right {
+    background-color: aqua;
+    text-align: center;
+    padding: 50px 0;
+    width: 20%; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,203 @@
+/* Header */
+header {
+  position: absolute;
+  z-index: 999;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-menu {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.nav-menu li a {
+  position: relative;
+  padding: 20px 24px !important;
+}
+.nav-menu li.active a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(to right, orange, red);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.nav-menu li {
+  position: relative;
+}
+.nav-menu li::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(to right, orange, red);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+.nav-menu li:hover::after {
+  width: 100%;
+}
+
+/* carousel */
+#demo .carousel-item {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  height: 100%;
+  padding-top: 19%;
+}
+
+#demo .carousel-item .container {
+  position: relative;
+  /* z-index: 5; */
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+  /* height: 100%; */
+  bottom: 73px;
+}
+
+.carousel-inner .item1 {
+  background-image: url("../img/hero-1.jpg");
+}
+
+.carousel-inner .item2 {
+  background-image: url("../img/hero-2.jpg");
+}
+
+.carousel-inner .item3 {
+  background-image: url("../img/hero-3.jpg");
+}
+
+.carousel-indicators {
+  justify-content: flex-start;
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid white;
+}
+
+.carousel-indicators li.active {
+  background-color: white;
+}
+
+.btn-trailer {
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+  border: none;
+  padding: 10px 40px;
+  border-radius: 25px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-trailer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: #ff6a00;
+  width: 0;
+  height: 100%;
+  transform: skewX(30deg);
+  left: -15px;
+  z-index: 0;
+  transition: all 0.5s;
+}
+
+.btn-trailer:hover::before {
+  width: 135%;
+}
+
+.btn-trailer i,
+.btn-trailer span {
+  position: relative;
+  z-index: 2;
+}
+
+.pg {
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+#new-in {
+  margin-top: 50px;
+}
+h1.title-heading {
+  color: orange;
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+  position: relative;
+}
+h1.title-heading::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(to right, orange, red);
+  position: absolute;
+  bottom: 0;
+  width: 14%;
+}
+.row.film.slick-carousel {
+  text-align: center;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .row h2 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .carousel-item {
+    height: 600px;
+    padding-top: 100px;
+  }
+}
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-next:before {
+  color: orange;
+}
+.slick-prev:before {
+  color: orange;
+}
+#comming-soon {
+  color: white;
+  margin-top: 50px;
+  padding-top: 50px;
+  position: relative;
+}
+#comming-soon h1.title-heading {
+  margin-bottom: 50px;
+}
+
+.bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+}
+
+.slide-contain div {
+  padding: 5px;
+}

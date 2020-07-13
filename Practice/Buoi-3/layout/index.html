@@ -9,9 +9,12 @@
       rel="stylesheet"
     />
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      type="text/css"
+      media="all"
     />
+    <link rel="stylesheet" href="./css/lightbox.min.css" />
 
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -21,11 +24,11 @@
       <nav class="header__nav">
         <ul>
           <li class="header__home"><a href="#">HOME</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">SERVICE</a></li>
-          <li><a href="#">GALLERY</a></li>
-          <li><a href="#">CLIENTS</a></li>
-          <li><a href="#">CONTACT</a></li>
+          <li><a class="header__menu" href="#">ABOUT</a></li>
+          <li><a class="header__menu" href="#">SERVICE</a></li>
+          <li><a class="header__menu" href="#">GALLERY</a></li>
+          <li><a class="header__menu" href="#">CLIENTS</a></li>
+          <li><a class="header__menu" href="#">CONTACT</a></li>
         </ul>
       </nav>
     </header>
@@ -133,7 +136,7 @@
         <div class="service-item">
           <div>
             <div class="item-img">
-              <img src="./images/to-top.png" />
+              <i class="fa fa-adjust" aria-hidden="true"></i>
             </div>
             <h2>
               TASTY
@@ -149,7 +152,7 @@
         <div class="service-item">
           <div>
             <div class="item-img">
-              <img src="./images/to-top.png" />
+              <i class="fa fa-adjust" aria-hidden="true"></i>
             </div>
             <h2>
               TASTY
@@ -165,7 +168,7 @@
         <div class="service-item">
           <div>
             <div class="item-img">
-              <img src="./images/to-top.png" />
+              <i class="fa fa-adjust" aria-hidden="true"></i>
             </div>
             <h2>
               TASTY
@@ -181,7 +184,7 @@
         <div class="service-item">
           <div>
             <div class="item-img">
-              <img src="./images/to-top.png" />
+              <i class="fa fa-adjust" aria-hidden="true"></i>
             </div>
             <h2>
               TASTY
@@ -198,24 +201,212 @@
     </section>
 
     <section id="gallery">
-        <h1>OUR GALLERY</h1>
+      <h1>OUR GALLERY <i class="fa fa-bed" aria-hidden="true"></i></h1>
       <div class="gallery-content">
         <div class="gallery-item g1">
-          <img src="./images/g1.jpg" />
-         <div class="g-text">
-            <h3>OUR GALLERY</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              et.
-            </p>
-         </div>
+          <a
+            class="gallery-item g1"
+            href="./images/g1.jpg"
+            data-lightbox="example"
+          >
+            <img src="./images/g1.jpg" />
+            <div class="g-text">
+              <h3>OUR GALLERY</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. et.
+              </p>
+            </div>
+          </a>
         </div>
+
+        <div class="gallery-item">
+          <a
+            class="gallery-item"
+            href="./images/g2.jpg"
+            data-lightbox="example"
+          >
+            <img src="./images/g2.jpg" />
+            <div class="g-text">
+              <h3>OUR GALLERY</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. et.
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item">
+          <a
+            class="gallery-item"
+            href="./images/g3.jpg"
+            data-lightbox="example"
+          >
+            <img src="./images/g3.jpg" />
+            <div class="g-text">
+              <h3>OUR GALLERY</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. et.
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item">
+          <a
+            class="gallery-item"
+            href="./images/g4.jpg"
+            data-lightbox="example"
+          >
+            <img src="./images/g4.jpg" />
+            <div class="g-text">
+              <h3>OUR GALLERY</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. et.
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item">
+          <a
+            class="gallery-item"
+            href="./images/g5.jpg"
+            data-lightbox="example"
+          >
+            <img src="./images/g5.jpg" />
+            <div class="g-text">
+              <h3>OUR GALLERY</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. et.
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item g6">
+          <a
+            class="gallery-item g6"
+            href="./images/g6.jpg"
+            data-lightbox="example"
+          >
+            <img src="./images/g6.jpg" />
+            <div class="g-text">
+              <h3>OUR GALLERY</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. et.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BAKE TEAM -->
+    <section id="bake-team">
+      <h1>
+        Baker
+      </h1>
+      <div class="bake-team-contain">
+        <div class="bake-team-item">
+          <img src="./images/t1.jpg" />
+
+          <div class="bake-item-footer">
+            <p>
+              Jonh Simon
+            </p>
+            <p>
+              Cake Maker
+            </p>
+          </div>
+
+          <div class="overlay">
+            <div class="overlay-contain">
+              <p>- Cake Maker</p>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Incidunt blanditiis, mollitia, tenetur, eligendi labore
+                exercitationem reiciendis unde corrupti reprehenderit
+                consequuntur atque repellat saepe commodi. Repellat asperiores
+                nihil ipsum inventore reiciendis.
+              </p>
+              <ul>
+                <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                <li><i class="fa fa-facebook-f" aria-hidden="true"></i></li>
+                <li><i class="fa fa-facebook-f" aria-hidden="true"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- overlay -->
+
+        <div class="bake-team-item">
+          <img src="./images/t2.jpg" />
+
+          <div class="bake-item-footer">
+            <p>
+              Jonh Simon
+            </p>
+            <p>
+              Cake Maker
+            </p>
+          </div>
+        </div>
+
+        <div class="bake-team-item">
+          <img src="./images/t3.jpg" />
+
+          <div class="bake-item-footer">
+            <p>
+              Jonh Simon
+            </p>
+            <p>
+              Cake Maker
+            </p>
+          </div>
+        </div>
+
+        <div class="bake-team-item">
+          <img src="./images/t4.jpg" />
+
+          <div class="bake-item-footer">
+            <p>
+              Jonh Simon
+            </p>
+            <p>
+              Cake Maker
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Test imonial -->
+    <section id="imonial">
+      <h1>
+        TESTIMONIALS
+      </h1>
+      <div class="imonial-contain">
+        <div class="imonial-item">
+          <p>
+            <i class="fa fa-quote-left" aria-hidden="true"> </i>Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Exercitationem minima
+            voluptatum suscipit magni libero fuga reprehenderit repellat
+            expedita recusandae. Quibusdam suscipit exercitationem hic debitis
+            sunt modi nostrum dicta non voluptatem.
+            <i class="fa fa-quote-right" aria-hidden="true"></i>
+          </p>
+          <p>MAX</p>
+        </div>
+        <div class="imonial-item"></div>
+        <div class="imonial-item"></div>
       </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
     <script src="./js/jquery.countup.min.js"></script>
+    <script src="./js/lightbox.js"></script>
 
     <script>
       $(document).ready(function () {
