@@ -1,0 +1,10 @@
+.MuiSvgIcon.root {
+  color: #149ddd;
+  font-size: 0.9rem;
+  margin: 0 2px;
+}
+
+.detail-item {
+  letter-spacing: 1px;
+  padding: 5px 0;
+}

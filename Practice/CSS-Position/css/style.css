@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 200vh;
+    padding: 2rem;
+}
+.parent-box {
+    position: relative;
+    background: black;
+    width: 500px;
+    height: 1000px;
+    padding: 2rem;
+}
+.child-box-1 {
+    /* static */
+    /* position: static; */
+    position: absolute;
+    top: 0rem;
+    right: 0;
+    background: green;
+    width: 200px;
+    height: 200px;
+}
+.child-box-2 {
+    position: sticky;
+    top:0;
+    background: red;
+    width: 200px;
+    height: 200px;
+}
