@@ -1,0 +1,168 @@
+@import "./helper/variable";
+@import "./base/reset";
+@import "./helper/mixin";
+.header {
+  color: $third-color;
+  .header-text {
+    background-color: $opacity-six-color;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+
+    .menu-logo {
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+
+      .navbar {
+        display: flex;
+        align-items: center;
+      }
+      .navbar-light {
+        .navbar-nav {
+          .nav-item {
+            position: relative;
+            margin-right: 20px;
+
+            &.active {
+              @include styleLinkMenuHover($isActive: true);
+            }
+
+            .nav-link {
+              color: $fourth-color;
+              font-size: 1rem;
+              font-weight: bold;
+              position: relative;
+              @include styleLinkMenuHover($isActive: false);
+            }
+          }
+        }
+      }
+
+      .menu {
+        @include styleContainer();
+        .logo {
+          text-decoration: none;
+          color: $primary-back-ground;
+          .fa {
+            &.fa-book {
+              font-size: 2rem;
+            }
+          }
+        }
+
+        .menu-text-logo {
+          display: inline-flex;
+          /* text-align: center; */
+          align-items: center;
+          flex-flow: column;
+
+          h1 {
+            font-weight: bolder;
+            color: $primary-back-ground;
+          }
+          h4 {
+            color: $white;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .content-slogan {
+    margin-left: auto;
+    margin-top: 20px;
+    height: 40%;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: $first-color;
+    h1 {
+      font-weight: 800;
+    }
+
+    .btn {
+      padding: 10px 50px;
+      transition: 0.5s all;
+      border-radius: 20px;
+      &.course-btn {
+        color: $six-color;
+        background-image: linear-gradient(
+          to right,
+          $first-color,
+          $second-color
+        );
+
+        &:hover {
+          background-image: linear-gradient(
+            to right,
+            $second-color,
+            $fourth-color
+          );
+          color: $first-color;
+        }
+      }
+    }
+  }
+
+  background-image: url("/images/banner.jpg");
+  height: 900px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carousel-slick {
+}
+
+.footer {
+  .info {
+    @include styleContainer();
+    @include flexCenter();
+
+    p {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    i {
+      margin-right: 10px;
+      &.fa-facebook,
+      &.fa-linkedin {
+        @include styleInfoHeader($first-color, $six-color);
+      }
+    }
+
+    .phone-info {
+      @include flexCenter();
+    }
+
+    .email-info {
+      @include flexCenter();
+      p {
+        transition: 0.5s;
+      }
+      p:hover {
+        color: $first-color;
+        transition: all 0.5s ease-out;
+        cursor: pointer;
+      }
+    }
+
+    .info-left-side {
+      @include flexCenter();
+      .phone-info {
+        margin: 0 50px 0 0;
+      }
+    }
+
+    .info-right-side {
+      margin-left: auto;
+    }
+  }
+}
