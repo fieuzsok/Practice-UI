@@ -1,0 +1,30 @@
+@mixin displayFlexCenter() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin styleForSearchInput() {
+  .my-group-serach {
+    margin: 0 !important;
+    border: 1px solid #eeeeee;
+    border-radius: 0.25rem;
+  }
+  #search {
+    border: transparent;
+  }
+  i {
+    background-color: white;
+    padding: 13px;
+    color: red;
+    border-right: 1px solid #eeeeee;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    &:hover {
+      background-color: red;
+      color: $color;
+    }
+  }
+  .form-control:focus {
+    box-shadow: none;
+  }
+}

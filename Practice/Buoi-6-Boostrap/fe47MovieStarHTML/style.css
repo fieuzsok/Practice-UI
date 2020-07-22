@@ -1,0 +1,113 @@
+/* Header */
+header {
+  position: absolute;
+  z-index: 999;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-menu {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.nav-menu li a {
+  position: relative;
+  padding: 20px 24px !important;
+}
+.nav-menu li.active a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(to right, orange, red);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.nav-menu li {
+  position: relative;
+}
+.nav-menu li::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(to right, orange, red);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+.nav-menu li:hover::after {
+  width: 100%;
+}
+
+/* carousel */
+.carousel-item {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  padding-top: 19%;
+}
+
+.carousel-inner .item1 {
+  background: url("./img/hero-1.jpg");
+}
+
+.carousel-inner .item2 {
+  background: url("./img/hero-2.jpg");
+}
+
+.carousel-inner .item3 {
+  background: url("./img/hero-3.jpg");
+}
+
+.carousel-indicators {
+  justify-content: flex-start;
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid white;
+}
+
+.carousel-indicators li.active {
+  background-color: white;
+}
+
+.btn-trailer {
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+  border: none;
+  padding: 10px 40px;
+  border-radius: 25px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-trailer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: #ff6a00;
+  width: 0;
+  height: 100%;
+  transform: skewX(30deg);
+  left: -15px;
+  z-index: 0;
+  transition: all 0.5s;
+}
+
+.btn-trailer:hover::before {
+  width: 135%;
+}
+
+.btn-trailer i,
+.btn-trailer span {
+  position: relative;
+  z-index: 1;
+}

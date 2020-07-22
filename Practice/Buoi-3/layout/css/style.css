@@ -36,9 +36,10 @@ header .header__nav {
 header .header__nav ul li.header__home a {
   color: #d21983;
 }
+
 header .header__nav ul,
 li,
-a {
+.header__menu {
   color: white;
   text-decoration: none;
   display: inline-block;
@@ -216,11 +217,32 @@ a {
 #gallery .gallery-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  /* cach deu item  */
+  grid-gap: 20px;
 }
 
 #gallery .gallery-content .gallery-item.g1 {
   grid-column: 1 / span 2;
   position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#gallery .gallery-content .gallery-item.g6 {
+  grid-column: 3 / span 2;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#gallery .gallery-content .gallery-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#gallery .gallery-content .gallery-item a {
+  display: inline-block;
 }
 
 #gallery .gallery-content img {
@@ -231,6 +253,13 @@ a {
 #gallery .gallery-content .g-text h3 {
   font-size: 2rem;
   transition: 0.5s;
+  transform: translateY(50px);
+}
+
+#gallery .gallery-content .gallery-item:hover .g-text h3 {
+  font-size: 2rem;
+  transition: 0.5s;
+  transform: translateY(0px);
 }
 
 #gallery .gallery-content .g-text h3::after {
@@ -275,4 +304,133 @@ a {
 #gallery .gallery-content .gallery-item:hover h3::after {
   opacity: 1;
   transform: translateY(0px);
+}
+
+span {
+  font-size: 60px;
+  border: 1px solid #4e2a84;
+  width: 105px;
+  height: 108px;
+  line-height: 110px;
+  border-radius: 50%;
+  background: #fff;
+  color: #4e2a84;
+  transition: 0.5s all;
+}
+
+#bake-team {
+  margin-top: 5rem;
+  background-color: #4e2a84;
+}
+
+#bake-team h1 {
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5rem 0;
+  font-weight: bold;
+}
+
+#bake-team .bake-team-contain .bake-team-item {
+  position: relative;
+  margin: 1rem 3rem;
+}
+
+#bake-team .bake-team-contain .bake-team-item img {
+  width: 100%;
+}
+
+#bake-team .bake-team-contain {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 90%;
+  margin: 0 auto;
+
+  /* lon hon 100% xuong dong  */
+  flex-wrap: wrap;
+}
+
+#bake-team .bake-team-contain .bake-team-item .bake-item-footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #ff0e83;
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  color: white;
+  transition: 1s;
+}
+
+#bake-team .bake-team-contain .bake-team-item .bake-item-footer p:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0 0 0.5rem 0;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: gray;
+  opacity: 0%;
+  transition: 1s;
+}
+
+.overlay .overlay-contain ul li {
+  list-style: none;
+}
+
+.overlay .overlay-contain ul li i {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+}
+
+.overlay .overlay-contain {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+#bake-team .bake-team-contain .bake-team-item:hover .overlay {
+  opacity: 80%;
+}
+#bake-team .bake-team-contain .bake-team-item:hover .bake-item-footer {
+  opacity: 0;
+}
+
+#imonial {
+  background-image: url("../images/cc1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+}
+
+#imonial h1 {
+  font-size: 5rem;
+  text-align: center;
+  padding: 4rem 0;
+  color: white;
+}
+
+#imonial .imonial-contain {
+  border: 0.5rem solid pink;
+  /* display: flex; */
+  /* justify-content: center; */
+  width: 50%;
+  margin: auto;
+  padding: 8rem;
+  background-color: white;
+  opacity: 50%;
+}
+
+#imonial .imonial-item {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 2rem;
 }
