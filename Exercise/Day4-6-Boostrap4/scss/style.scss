@@ -1,19 +1,103 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@import "./helper/variable";
+@import "./base/reset";
+@import "./helper/mixin";
 
 .header {
-    display: flex;
+  @include styleContainer();
+  @include flexCenter();
+  background-color: $primary-back-ground;
+  color: $third-color;
+  p {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  i {
+    margin-right: 10px;
+    &.fa-facebook,
+    &.fa-twitter,
+    &.fa-pinterest-p,
+    &.fa-linkedin {
+      @include styleInfoHeader($second-back-ground, $primary-back-ground);
+    }
+  }
 
-    &.info-left-side {
-        .phone-info {
-            margin: 0 50px 0 0;
+  .phone-info {
+    @include flexCenter();
+  }
+
+  .email-info {
+    @include flexCenter();
+    p {
+      transition: 0.5s;
+    }
+    p:hover {
+      color: black;
+      transition: all 0.5s ease-out;
+      cursor: pointer;
+    }
+  }
+
+  .info-left-side {
+    @include flexCenter();
+    .phone-info {
+      margin: 0 50px 0 0;
+    }
+  }
+
+  .info-right-side {
+    margin-left: auto;
+  }
+}
+
+.container {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  .navbar-light {
+    .navbar-nav {
+      .nav-item {
+        position: relative;
+
+        &.active {
+          @include styleLinkMenuHover($isActive: true);
         }
+
+        .nav-link {
+          color: black;
+          font-size: 1rem;
+          font-weight: bold;
+          position: relative;
+          @include styleLinkMenuHover($isActive: false);
+        }
+      }
+    }
+  }
+
+  .menu {
+    @include styleContainer();
+    .logo {
+      text-decoration: none;
+      color: black;
+      .fa {
+        &.fa-book {
+          font-size: 2rem;
+        }
+      }
     }
 
-    &.info-right-side {
-        margin-left: auto;
+    .menu-text-logo {
+      display: inline-flex;
+      /* text-align: center; */
+      align-items: center;
+      flex-flow: column;
+
+      h1 {
+        font-weight: bolder;
+      }
+      h4 {
+        color: $primary-back-ground;
+        font-weight: bold;
+      }
     }
+  }
 }
