@@ -4,84 +4,118 @@
 @import "./component/button";
 
 @import "./component/header";
+@import "./component/stat";
+@import "./component/feedback.scss";
 
-.carousel {
-  width: 80%;
-  margin: auto;
-  .course-item {
-    position: relative;
-    bottom: 0;
-    margin: 50px 0;
-    text-align: center;
-    cursor: pointer;
-    background-color: $fourth-color;
-    color: $six-color;
-    transition: 0.5s all ease-in-out;
-    box-shadow: 0 20px 20px -15px $opacity-six-color;
-    // float: none !important;
-    // width: 50% !important;
-    display: flex;
+.carousel-slick {
+  margin: 100px 0;
 
-    border-top: 10px solid $third-color;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 2;
+  .carousel {
     width: 80%;
-    display: inline-block;
-    height: fit-content;
+    margin: auto;
 
-    img {
-      width: 100%;
-    }
-    .detail {
-      margin: 0 20px;
-      font-size: 1.2rem;
-    }
-    h3 {
-      margin: 20px 0;
-    }
-
-    .button-group-course {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-    }
-    &:hover {
+    .course-item {
+      position: relative;
+      bottom: 0;
+      margin: 50px 0;
+      text-align: center;
+      cursor: pointer;
+      background-color: $fourth-color;
+      color: $six-color;
       transition: 0.5s all ease-in-out;
+      box-shadow: 0 20px 20px -15px $opacity-six-color;
+      // float: none !important;
+      // width: 50% !important;
+      display: flex;
 
-      bottom: 20px;
+      border-top: 10px solid $third-color;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      align-items: center;
+      flex-grow: 2;
+      width: 80%;
+      display: inline-block;
+      height: fit-content;
+
+      img {
+        width: 100%;
+        height: auto;
+
+
+      }
+
+      .detail {
+        margin: 5px 20px;
+        font-size: 1.2rem;
+
+        @include tablet {
+          font-size: 1rem;
+        }
+
+        @include mobile {
+          font-size: 0.5rem;
+        }
+      }
+
+      h3 {
+        margin: 20px 0;
+
+        @include tablet {
+          font-size: 1.5rem;
+          margin: 10px 0;
+        }
+
+        @include mobile {
+          font-size: 1rem;
+          margin: 5px 0;
+        }
+      }
 
       .button-group-course {
-        .course-btn {
-          padding: 20px 55px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      &:hover {
+        transition: 0.5s all ease-in-out;
+
+        bottom: 20px;
+
+        .button-group-course {
+          .course-btn {
+            padding: 20px 55px;
+          }
         }
       }
     }
+
+    #next {
+      background: 0 0;
+      color: inherit;
+      border: none;
+      font: inherit;
+      left: 0;
+      font-size: 10rem;
+      color: #fdfdfd9e;
+    }
+
+    #next,
+    #privious {}
   }
-  #next {
-    background: 0 0;
-    color: inherit;
-    border: none;
-    font: inherit;
-    left: 0;
-    font-size: 10rem;
-    color: #fdfdfd9e;
+
+  /* the slides */
+  .slick-slide {
+    margin: 0 20px;
   }
-  #next,
-  #privious {
+
+  /* the parent */
+  .slick-list {
+    margin: 0;
   }
 }
 
-/* the slides */
-.slick-slide {
-  margin: 0 20px;
-}
-/* the parent */
-.slick-list {
-  margin: 0;
-}
 
 .footer {
   .info {
@@ -92,8 +126,10 @@
       margin: 0 !important;
       padding: 0 !important;
     }
+
     i {
       margin-right: 10px;
+
       &.fa-facebook,
       &.fa-linkedin {
         @include styleInfoHeader($third-color, $six-color);
@@ -106,9 +142,11 @@
 
     .email-info {
       @include flexCenter();
+
       p {
         transition: 0.5s;
       }
+
       p:hover {
         color: $first-color;
         transition: all 0.5s ease-out;
@@ -118,6 +156,7 @@
 
     .info-left-side {
       @include flexCenter();
+
       .phone-info {
         margin: 0 50px 0 0;
       }
@@ -132,9 +171,6 @@
 @media screen and (max-width: 1253px) {
   .carousel .course-item .button-group-course {
     display: block;
-    .course-btn {
-      padding: 10px 55px;
-      margin: 10px 0;
-    }
+
   }
 }

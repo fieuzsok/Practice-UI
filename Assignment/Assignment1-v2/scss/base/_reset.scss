@@ -1,7 +1,10 @@
+@import "../helper/mixin";
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
   &:focus {
     outline: none;
   }
@@ -10,4 +13,24 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+}
+
+p {
+  margin: 0 !important;
+}
+
+.title-section {
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0;
+  text-transform: capitalize;
+  font-size: 3rem;
+
+  @include mobile {
+    font-size: 1rem;
+  }
+
+  @include tablet {
+    font-size: 2rem;
+  }
 }

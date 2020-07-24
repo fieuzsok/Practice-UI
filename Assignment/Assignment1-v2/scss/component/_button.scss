@@ -12,10 +12,34 @@
   user-select: none;
   margin: 30px 10px;
 
+  @include tablet {
+    font-weight: normal;
+    margin: 20px 5px;
+    padding: 5px 5px;
+    font-size: 1rem;
+  }
+
+  @include mobile {
+    font-weight: normal;
+    margin: 10px 0px;
+    padding: 5px 5px;
+    font-size: 0.5rem;
+  }
+
   background-image: linear-gradient(to right, $second-color, $first-color);
 
   &:hover {
     padding: 15px 51px;
+
+    @include tablet {
+      padding: 10px 30px;
+    }
+
+    @include mobile {
+      padding: 5px 15px;
+
+    }
+
     box-shadow: 0 20px 20px -15px $opacity-six-color;
     background-image: linear-gradient(to right, $five-color, $second-color);
 

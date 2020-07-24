@@ -1,3 +1,5 @@
+@import "./variable";
+
 @mixin styleInfoHeader($bgColor, $bgColorHover) {
   &:hover {
     transition: 0.1s all;
@@ -5,6 +7,7 @@
     background-color: $bgColorHover;
     color: $bgColor;
   }
+
   cursor: pointer;
   border: 1px solid black;
   padding: 15px;
@@ -26,6 +29,7 @@
     &:hover {
       transition: 1s;
       color: $primary-back-ground;
+
       &::before {
         content: "";
         width: 100%;
@@ -38,6 +42,7 @@
         transition: 0.5s;
       }
     }
+
     &::before {
       content: "";
       width: 0%;
@@ -48,7 +53,9 @@
       left: 0;
       transition: 0.5s;
     }
-  } @else {
+  }
+
+  @else {
     &::before {
       content: "";
       width: 100%;
@@ -59,5 +66,28 @@
       transition: 0.5s;
       position: absolute;
     }
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width - 1px}) {
+    @content;
+  }
+
+  @media (min-width: #{$mobile-width - 1px}) and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
   }
 }
