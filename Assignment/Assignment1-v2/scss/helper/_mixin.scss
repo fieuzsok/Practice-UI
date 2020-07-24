@@ -1,6 +1,6 @@
 @mixin styleInfoHeader($bgColor, $bgColorHover) {
   &:hover {
-    transition: 0.5s all;
+    transition: 0.1s all;
     border: 1px solid white;
     background-color: $bgColorHover;
     color: $bgColor;
@@ -9,7 +9,7 @@
   border: 1px solid black;
   padding: 15px;
   background-color: $bgColor;
-  transition: 0.5s;
+  transition: 0.1s;
 }
 
 @mixin styleContainer() {

@@ -2,10 +2,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  &:focus {
+    outline: none;
+  }
 }
 
 body {
   font-family: "Montserrat", sans-serif;
-
   font-size: 14px;
 }

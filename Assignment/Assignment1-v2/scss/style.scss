@@ -1,124 +1,86 @@
 @import "./helper/variable";
 @import "./base/reset";
 @import "./helper/mixin";
-.header {
-  color: $third-color;
-  .header-text {
-    background-color: $opacity-six-color;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 0;
+@import "./component/button";
 
-    .menu-logo {
-      text-transform: uppercase;
-      display: flex;
-      justify-content: space-between;
+@import "./component/header";
 
-      .navbar {
-        display: flex;
-        align-items: center;
-      }
-      .navbar-light {
-        .navbar-nav {
-          .nav-item {
-            position: relative;
-            margin-right: 20px;
-
-            &.active {
-              @include styleLinkMenuHover($isActive: true);
-            }
-
-            .nav-link {
-              color: $fourth-color;
-              font-size: 1rem;
-              font-weight: bold;
-              position: relative;
-              @include styleLinkMenuHover($isActive: false);
-            }
-          }
-        }
-      }
-
-      .menu {
-        @include styleContainer();
-        .logo {
-          text-decoration: none;
-          color: $primary-back-ground;
-          .fa {
-            &.fa-book {
-              font-size: 2rem;
-            }
-          }
-        }
-
-        .menu-text-logo {
-          display: inline-flex;
-          /* text-align: center; */
-          align-items: center;
-          flex-flow: column;
-
-          h1 {
-            font-weight: bolder;
-            color: $primary-back-ground;
-          }
-          h4 {
-            color: $white;
-            font-weight: bold;
-          }
-        }
-      }
-    }
-  }
-
-  .content-slogan {
-    margin-left: auto;
-    margin-top: 20px;
-    height: 40%;
+.carousel {
+  width: 80%;
+  margin: auto;
+  .course-item {
+    position: relative;
+    bottom: 0;
+    margin: 50px 0;
     text-align: center;
+    cursor: pointer;
+    background-color: $fourth-color;
+    color: $six-color;
+    transition: 0.5s all ease-in-out;
+    box-shadow: 0 20px 20px -15px $opacity-six-color;
+    // float: none !important;
+    // width: 50% !important;
+    display: flex;
+
+    border-top: 10px solid $third-color;
     display: flex;
     flex-flow: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    color: $first-color;
-    h1 {
-      font-weight: 800;
+    flex-grow: 2;
+    width: 80%;
+    display: inline-block;
+    height: fit-content;
+
+    img {
+      width: 100%;
+    }
+    .detail {
+      margin: 0 20px;
+      font-size: 1.2rem;
+    }
+    h3 {
+      margin: 20px 0;
     }
 
-    .btn {
-      padding: 10px 50px;
-      transition: 0.5s all;
-      border-radius: 20px;
-      &.course-btn {
-        color: $six-color;
-        background-image: linear-gradient(
-          to right,
-          $first-color,
-          $second-color
-        );
+    .button-group-course {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    &:hover {
+      transition: 0.5s all ease-in-out;
 
-        &:hover {
-          background-image: linear-gradient(
-            to right,
-            $second-color,
-            $fourth-color
-          );
-          color: $first-color;
+      bottom: 20px;
+
+      .button-group-course {
+        .course-btn {
+          padding: 20px 55px;
         }
       }
     }
   }
-
-  background-image: url("/images/banner.jpg");
-  height: 900px;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  #next {
+    background: 0 0;
+    color: inherit;
+    border: none;
+    font: inherit;
+    left: 0;
+    font-size: 10rem;
+    color: #fdfdfd9e;
+  }
+  #next,
+  #privious {
+  }
 }
 
-.carousel-slick {
+/* the slides */
+.slick-slide {
+  margin: 0 20px;
+}
+/* the parent */
+.slick-list {
+  margin: 0;
 }
 
 .footer {
@@ -134,7 +96,7 @@
       margin-right: 10px;
       &.fa-facebook,
       &.fa-linkedin {
-        @include styleInfoHeader($first-color, $six-color);
+        @include styleInfoHeader($third-color, $six-color);
       }
     }
 
@@ -163,6 +125,16 @@
 
     .info-right-side {
       margin-left: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1253px) {
+  .carousel .course-item .button-group-course {
+    display: block;
+    .course-btn {
+      padding: 10px 55px;
+      margin: 10px 0;
     }
   }
 }

@@ -1,0 +1,28 @@
+.course-btn {
+  cursor: pointer;
+  border: none;
+  padding: 20px 50px;
+  transition: 0.5s all ease-in-out;
+  border-radius: 50px;
+  color: $white;
+  font-weight: bolder;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 30px 10px;
+
+  background-image: linear-gradient(to right, $second-color, $first-color);
+
+  &:hover {
+    padding: 15px 51px;
+    box-shadow: 0 20px 20px -15px $opacity-six-color;
+    background-image: linear-gradient(to right, $five-color, $second-color);
+
+    color: $six-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
