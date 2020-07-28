@@ -22,7 +22,7 @@
               <h3 class="panel-title text-center">Quản lý nhân viên</h3>
             </div>
             <div class="panel-body">
-              <form role="form">
+              <form role="form" id="form-nv">
                 <div class="container">
                   <div class="row">
                     <div class="col-xs-6 col-sm-6 col-md-6">
@@ -34,7 +34,7 @@
                           class="form-control input-sm floatlabel"
                           placeholder="Họ"
                         />
-                        <span class="sp-thongbao"></span>
+                        <span class="sp-thongbao" id="sp-lastName"></span>
                       </div>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6">
@@ -46,7 +46,7 @@
                           class="form-control input-sm"
                           placeholder="Tên"
                         />
-                        <span class="sp-thongbao"></span>
+                        <span class="sp-thongbao" id="sp-firstName"></span>
                       </div>
                     </div>
                   </div>
@@ -59,7 +59,7 @@
                       class="form-control input-sm"
                       placeholder="Mã nhân viên"
                     />
-                    <span class="sp-thongbao"></span>
+                    <span class="sp-thongbao" id="sp-emplId"></span>
                   </div>
                   <div class="row">
                     <div class="col-xs-6 col-sm-6 col-md-6">
@@ -73,7 +73,7 @@
                             placeholder="Ngày làm"
                           />
                         </div>
-                        <span class="sp-thongbao"></span>
+                        <span class="sp-thongbao" id="sp-dateIn"></span>
                       </div>
                     </div>
                   </div>
@@ -84,7 +84,7 @@
                       <option>Trưởng phòng</option>
                       <option>Nhân viên</option>
                     </select>
-                    <span class="sp-thongbao"></span>
+                    <span class="sp-thongbao" id="sp-role"></span>
                   </div>
 
                   <input
@@ -92,6 +92,24 @@
                     value="Thêm Nhân Viên"
                     class="btn btn-info btn-block"
                     onclick="addEmployee();"
+                    id="add"
+                  />
+
+                  <input
+                    type="button"
+                    style="display: none;"
+                    value="Cập Nhật Thông Tin"
+                    class="btn btn-info btn-block"
+                    id="update"
+                    onclick="updateEmpl();"
+                  />
+                  <input
+                    type="button"
+                    style="display: none;"
+                    value="Hủy"
+                    class="btn btn-danger btn-block"
+                    id="cancel"
+                    onclick="huy();"
                   />
                 </div>
               </form>
@@ -100,7 +118,16 @@
         </div>
       </div>
     </div>
+
     <div id="hienthi" class="container">
+      <div class="form-group">
+        <input
+          type="text"
+          id="search-e"
+          class="form-control input-sm"
+          placeholder="Tim kiem"
+        />
+      </div>
       <table class="table text-white">
         <thead>
           <tr>
@@ -130,6 +157,8 @@
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script src="./js/employee.js"></script>
+    <script src="./js/validation.js"></script>
+    <script src="./js/employee-list.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
     <script src="WOW-master/dist/wow.min.js"></script>

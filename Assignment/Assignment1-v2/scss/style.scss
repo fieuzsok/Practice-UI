@@ -41,8 +41,6 @@
       img {
         width: 100%;
         height: auto;
-
-
       }
 
       .detail {
@@ -102,7 +100,8 @@
     }
 
     #next,
-    #privious {}
+    #privious {
+    }
   }
 
   /* the slides */
@@ -115,7 +114,6 @@
     margin: 0;
   }
 }
-
 
 .footer {
   .info {
@@ -171,6 +169,111 @@
 @media screen and (max-width: 1253px) {
   .carousel .course-item .button-group-course {
     display: block;
+  }
+}
 
+#map {
+  border: 2px solid $six-color;
+  background-color: grey;
+  padding: 15px;
+}
+
+#contact {
+  margin: 80px 0;
+}
+form {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+}
+.form-control {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  justify-content: space-between;
+  align-content: space-evenly;
+}
+.form-control input,
+textarea {
+  margin: 10px;
+  border: none;
+  border-bottom: 2px solid #999999;
+  background: #efefef;
+  padding-left: 20px;
+  color: #a1a19e;
+  height: 190px;
+}
+.form-control input {
+  height: 50px;
+}
+.form-control button.submit {
+  height: 50px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+#footer {
+  background-color: $second-color;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px;
+  height: 150px;
+  align-items: center;
+  color: $six-color;
+}
+
+#footer {
+  ul {
+    margin-top: 20px;
+    margin-bottom: 0px !important;
+  }
+  li {
+    list-style-type: none;
+  }
+  a {
+    color: $six-color;
+    i {
+      &.fa-facebook,
+      &.fa-linkedin,
+      &.fa-rss {
+        @include styleInfoHeader($third-color, $six-color);
+      }
+    }
+  }
+}
+
+.backToTop {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99; /* Make sure it does not overlap */
+}
+
+.backToTop .backToTopLink {
+  font-size: 3rem;
+  opacity: 0;
+}
+
+.backToTop .cd-top--is-visible {
+  visibility: visible;
+  opacity: 0.5;
+}
+
+.backToTop .cd-top--fade-out {
+  opacity: 0.5;
+}
+
+.backToTop a {
+  color: black;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 1253px) {
+  .backToTop {
+    display: block;
   }
 }
