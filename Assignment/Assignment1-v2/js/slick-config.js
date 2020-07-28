@@ -6,7 +6,7 @@ $(document).ready(function () {
     dots: true,
     nextArrow: $("#next"),
     prevArrow: $("#previous"),
-    // autoplay: true,
+    autoplay: true,
 
     responsive: [
       {

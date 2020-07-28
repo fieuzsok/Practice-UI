@@ -3,13 +3,13 @@
 @mixin styleInfoHeader($bgColor, $bgColorHover) {
   &:hover {
     transition: 0.1s all;
-    border: 1px solid white;
+    border: 1px solid $bgColor;
     background-color: $bgColorHover;
     color: $bgColor;
   }
 
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid $bgColor;
   padding: 15px;
   background-color: $bgColor;
   transition: 0.1s;
@@ -53,9 +53,7 @@
       left: 0;
       transition: 0.5s;
     }
-  }
-
-  @else {
+  } @else {
     &::before {
       content: "";
       width: 100%;
@@ -78,7 +76,6 @@
     @content;
   }
 }
-
 
 @mixin tablet {
   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {

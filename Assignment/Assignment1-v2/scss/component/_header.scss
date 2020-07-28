@@ -1,88 +1,155 @@
 @import "./component/button";
 
-.header {
+.header-text {
   color: $third-color;
-  .header-text {
-    background-color: $opacity-six-color;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: $opacity-six-color;
+  height: fit-content;
+
+  .container {
     padding: 30px 0;
-
-    .menu-logo {
-      text-transform: uppercase;
+  }
+  .menu-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .navbar {
       display: flex;
-      justify-content: space-between;
-
-      .navbar {
-        display: flex;
-        align-items: center;
+      align-items: center;
+      @include tablet {
+        font-size: 1.6rem;
+        font-weight: bold;
       }
-      .navbar-light {
-        .navbar-nav {
-          .nav-item {
-            position: relative;
-            margin-right: 20px;
 
-            &.active {
-              @include styleLinkMenuHover($isActive: true);
-            }
-
-            .nav-link {
-              color: $fourth-color;
+      @include mobile {
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+    }
+    .navbar-light {
+      .navbar-nav {
+        .nav-item {
+          .dropdown-menu {
+            @include tablet {
               font-size: 1rem;
               font-weight: bold;
-              position: relative;
-              @include styleLinkMenuHover($isActive: false);
+            }
+
+            @include mobile {
+              font-weight: bold;
+              font-size: 0.5rem;
             }
           }
-        }
-      }
+          position: relative;
+          margin-right: 20px;
 
-      .menu {
-        @include styleContainer();
-        .logo {
-          text-decoration: none;
-          color: $primary-back-ground;
-          .fa {
-            &.fa-book {
-              font-size: 2rem;
+          &.active {
+            @include styleLinkMenuHover($isActive: true);
+          }
+
+          .nav-link {
+            @include tablet {
+              font-size: 1rem;
+              font-weight: bold;
             }
-          }
-        }
 
-        .menu-text-logo {
-          display: inline-flex;
-          /* text-align: center; */
-          align-items: center;
-          flex-flow: column;
-          font-family: "Wallpoet", cursive;
-          h1 {
-            font-weight: bolder;
-            color: $primary-back-ground;
-          }
-          h4 {
-            color: $white;
+            @include mobile {
+              font-weight: bold;
+              font-size: 0.5rem;
+            }
+            color: $fourth-color;
+            font-size: 1.3rem;
             font-weight: bold;
+            position: relative;
+            @include styleLinkMenuHover($isActive: false);
           }
         }
       }
     }
+
+    .menu {
+      @include styleContainer();
+      .logo {
+        text-decoration: none;
+        color: $primary-back-ground;
+        .fa {
+          &.fa-book {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .menu-text-logo {
+        display: inline-flex;
+        /* text-align: center; */
+        align-items: center;
+        flex-flow: column;
+        font-family: "Wallpoet", cursive;
+        font-size: 3rem;
+        @include tablet {
+          font-size: 1.6rem;
+          font-weight: bold;
+        }
+
+        @include mobile {
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+        h1 {
+          font-size: 3rem;
+          @include tablet {
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+
+          @include mobile {
+            font-weight: bold;
+            font-size: 1rem;
+          }
+          font-weight: bolder;
+          color: $primary-back-ground;
+        }
+        h4 {
+          font-size: 3rem;
+          @include tablet {
+            font-size: 1.6rem;
+            font-weight: bold;
+          }
+
+          @include mobile {
+            font-weight: bold;
+            font-size: 1.2rem;
+          }
+          color: $white;
+          font-weight: bold;
+        }
+      }
+    }
   }
+}
+
+.header {
+  color: $third-color;
 
   .content-slogan {
     margin-left: auto;
-    margin-top: 20px;
-    height: 40%;
     text-align: center;
     display: flex;
     flex-flow: column;
     justify-content: space-evenly;
     align-items: center;
     color: $first-color;
+    height: 100%;
 
     h1 {
+      @include tablet {
+        font-size: 5rem;
+        font-weight: bold;
+      }
+
+      @include mobile {
+        font-weight: bold;
+        font-size: 3rem;
+      }
       font-weight: 1000;
       font-size: 90px;
       font-family: "Wallpoet", cursive;
@@ -90,9 +157,17 @@
   }
 
   background-image: url("/images/banner.jpg");
-  height: 900px;
+  height: 800px;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include tablet {
+    height: 700px;
+  }
+
+  @include mobile {
+    height: 500px;
+  }
 }
