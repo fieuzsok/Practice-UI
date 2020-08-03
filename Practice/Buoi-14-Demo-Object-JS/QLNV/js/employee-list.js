@@ -33,7 +33,7 @@ function EmployeeList() {
 
   this.getEmployeeByID = (id) => {
     return this.arr.find((e) => {
-      return e.ID === id;
+      return e.id === id;
     });
   };
 
