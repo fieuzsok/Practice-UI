@@ -1,0 +1,99 @@
+// STAT
+#stats {
+    margin: 100px auto;
+    text-align: center;
+    background-color: $second-color;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+
+    @include tablet {
+        height: 300px;
+        margin: 50px auto;
+    }
+
+    @include mobile {
+        height: 160px;
+        margin: 30px auto;
+    }
+
+
+
+    .stats-list {
+        display: flex;
+        width: 80%;
+        margin: 30px auto;
+        justify-content: center;
+
+        @include tablet {
+            margin: 20px auto;
+        }
+
+        @include mobile {
+            margin: 10px auto;
+
+        }
+
+        .stats-item {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            margin: 10px 85px;
+            color: $six-color;
+            border: 2px solid $white;
+            padding: 15px;
+
+            height: 200px;
+            border-radius: 50%;
+            background-color: $white;
+            color: $first-color;
+            width: 200px;
+
+            @include tablet {
+                width: 100px;
+                height: 100px;
+                margin: 0 20px;
+                padding: 5px;
+
+            }
+
+            @include mobile {
+                width: 50px;
+                height: 50px;
+                margin: 0 10px;
+                padding: 0;
+
+            }
+
+
+            .counter {
+                font-size: 3rem;
+
+                @include mobile {
+                    font-size: 0.6rem;
+                }
+
+                @include tablet {
+                    font-size: 1rem;
+                }
+            }
+
+            .stats-value {
+                font-size: 1.5rem;
+
+                @include mobile {
+                    font-size: 0.5rem;
+                }
+
+                @include tablet {
+                    font-size: 1rem;
+                }
+            }
+
+
+        }
+    }
+
+}

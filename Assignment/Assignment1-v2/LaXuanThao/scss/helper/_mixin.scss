@@ -1,0 +1,90 @@
+@import "./variable";
+
+@mixin styleInfoHeader($bgColor, $bgColorHover) {
+  &:hover {
+    transition: 0.1s all;
+    border: 1px solid $bgColor;
+    background-color: $bgColorHover;
+    color: $bgColor;
+  }
+
+  cursor: pointer;
+  border: 1px solid $bgColor;
+  padding: 15px;
+  background-color: $bgColor;
+  transition: 0.1s;
+}
+
+@mixin styleContainer() {
+  padding: 5px 20px;
+}
+
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin styleLinkMenuHover($isActive) {
+  @if ($isActive==false) {
+    &:hover {
+      transition: 1s;
+      color: $primary-back-ground;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #ff4f81;
+        position: absolute;
+        bottom: 0;
+        left: -1;
+        left: 0;
+        transition: 0.5s;
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 0%;
+      height: 2px;
+      background-color: #ff4f81;
+      bottom: 0;
+      left: -1;
+      left: 0;
+      transition: 0.5s;
+    }
+  } @else {
+    &::before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: #ff4f81;
+      bottom: 0;
+      left: 0;
+      transition: 0.5s;
+      position: absolute;
+    }
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width - 1px}) {
+    @content;
+  }
+
+  @media (min-width: #{$mobile-width - 1px}) and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
