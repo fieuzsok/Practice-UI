@@ -12,17 +12,25 @@
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
     />
   </head>
   <body>
     <h1 class="display-3 text-center">Testing online</h1>
     <div class="container" id="question-section"></div>
-    <button class="btn btn-success my-4" type="submit" id="btn-submit">
-      Submit
-    </button>
+    <div class="d-inline">
+      <button class="btn btn-success my-4" type="submit" id="btn-submit">
+        Submit
+      </button>
+      <h1 id="score" class="text-red d-inline"></h1>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -41,12 +49,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-    <script src="model/questions.js"></script>
-    <script src="model/multiple-choice.js"></script>
-    <script src="model/fill-blank.js"></script>
-    <script src="js/main.js"></script>
-    <script src="playground/demo-es6.js"></script>
-    <script src="playground/ES6-arr.js"></script>
-    <script src="playground/destructuring-demo.js"></script>
+
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

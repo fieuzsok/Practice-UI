@@ -1,5 +1,7 @@
+import { Questions } from "./questions.js";
 //extend question
-class MultipleChoices extends Questions {
+//import question đúng tên class
+export class MultipleChoices extends Questions {
   constructor(questionType, _id, content, answers) {
     //truyền vào super đầy đủ  những tham số mà lớp cha có
     super(questionType, _id, content, answers);
@@ -14,9 +16,8 @@ class MultipleChoices extends Questions {
     var htmlAnserContent = "";
     this.answers.map((answer) => {
       htmlAnserContent += `
-            <div>
-                <input type="radio"/>
-                <label >${answer.content}</label>
+            <div class="radio">
+            <label><input type="radio" name="answer-${this._id}" value="${answer._id}"/> ${answer.content}</label>               
             </div>
         `;
     });
@@ -28,7 +29,26 @@ class MultipleChoices extends Questions {
     </div>
     `;
   }
-  checkExact() {}
+  checkExact() {
+    var radio = document.getElementsByName(`answer-${this._id}`);
+    var selectedValue = "";
+    let ansId;
+    var label = false;
+    radio.forEach((selectedRadio) => {
+      if (selectedRadio.checked) {
+        ansId = selectedRadio.value;
+      }
+    });
+    if (!ansId) return;
+    else {
+      this.answers.forEach((a) => {
+        if (a._id == ansId && a.exact) {
+          label = true;
+        }
+      });
+    }
+    return label;
+  }
 }
 
 const multipleChoices = new MultipleChoices(1, 1, "What is this?", [
@@ -38,3 +58,4 @@ const multipleChoices = new MultipleChoices(1, 1, "What is this?", [
 
 console.log(multipleChoices);
 console.log(multipleChoices.render());
+console.log("Radio", multipleChoices.checkExact());

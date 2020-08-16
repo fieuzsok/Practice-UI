@@ -1,0 +1,8 @@
+.ex1-footer {
+  /* text-align: center; */
+  display: flex;
+  background: red;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}

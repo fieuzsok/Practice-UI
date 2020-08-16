@@ -1,0 +1,9 @@
+.ex1-content {
+  /* text-align: center; */
+  display: flex;
+  background: yellow;
+  height: 350px;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+}

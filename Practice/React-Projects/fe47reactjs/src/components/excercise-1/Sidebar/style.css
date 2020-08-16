@@ -1,0 +1,9 @@
+.ex1-sidebar {
+  /* text-align: center; */
+  display: flex;
+  background: blue;
+  height: 350px;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}

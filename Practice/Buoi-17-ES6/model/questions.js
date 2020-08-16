@@ -8,7 +8,7 @@ function Question(questionType, _id, content) {
  */
 
 //ES6
-class Questions {
+export class Questions {
   constructor(questionType, _id, content, answers) {
     this.questionType = questionType;
     this._id = _id;

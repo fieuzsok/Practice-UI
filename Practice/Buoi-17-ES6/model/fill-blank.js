@@ -1,5 +1,6 @@
+import { Questions } from "./questions.js";
 //extend question
-class FillBlank extends Questions {
+export class FillBlank extends Questions {
   constructor(questionType, _id, content, answers) {
     //truyền vào super đầy đủ  những tham số mà lớp cha có
     super(questionType, _id, content, answers);
@@ -15,17 +16,15 @@ class FillBlank extends Questions {
     return `
       <div>
           <p>Câu ${this._id}: ${this.content}?</p>
-          <span>Câu trả lời: </span><input class="form-control w-50" type="text" />
+          <span>Câu trả lời: </span><input class="form-control w-50" type="text" id="${this._id}"/>
       </div>
       `;
   }
-  checkExact() {}
+  checkExact() {
+    var answText = document.getElementById(`${this._id}`).value;
+    if (this.answers[0].content == answText) {
+      return true;
+    }
+    return false;
+  }
 }
-
-const fill = new FillBlank(1, 1, "What is this?", [
-  { content: "Asnwer1" },
-  { content: "Asnwer1" },
-]);
-
-console.log(fill);
-console.log(fill.render());

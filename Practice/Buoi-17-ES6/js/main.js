@@ -1,3 +1,5 @@
+import { MultipleChoices } from "../model/multiple-choice.js";
+import { FillBlank } from "../model/fill-blank.js";
 /**
  * Project: Tesing web
  * Feature:
@@ -53,10 +55,21 @@ const renderQuestionList = () => {
     document.getElementById("question-section").innerHTML = HTMLCOntent;
   }
 };
+const getScore = () => {
+  var score = 0;
+  if (questionList) {
+    questionList.forEach((ques) => {
+      if (ques.checkExact()) {
+        score += 1;
+      }
+    });
+  }
+  document.getElementById("score").innerHTML = score;
+  console.log("scrore", score);
+  return score;
+};
 
 fetchQuestion();
 
 //arrow funct
-document.getElementById("btn-submit").addEventListener("click", () => {
-  console.log("This", this);
-});
+document.getElementById("btn-submit").addEventListener("click", getScore);

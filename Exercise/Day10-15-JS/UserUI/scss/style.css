@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+  *:focus {
+    outline: none; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px; }
+
+p {
+  margin: 0 !important; }
+
+.title-section {
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0;
+  text-transform: capitalize;
+  font-size: 3rem; }
+  @media (max-width: 479px) {
+    .title-section {
+      font-size: 1rem; } }
+  @media (min-width: 479px) and (max-width: 768px) {
+    .title-section {
+      font-size: 1rem; } }
+  @media (min-width: 768px) and (max-width: 1600px) {
+    .title-section {
+      font-size: 2rem; } }
+
+/*# sourceMappingURL=style.css.map */
