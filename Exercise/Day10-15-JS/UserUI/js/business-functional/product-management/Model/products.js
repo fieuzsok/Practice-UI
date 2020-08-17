@@ -1,4 +1,4 @@
-class Product {
+export class Product {
   constructor(id, name, image, description, price, inventory, rating, type) {
     this.id = id;
     this.name = name;
@@ -10,8 +10,5 @@ class Product {
     this.type = type;
   }
 
-  render(){
-      
-  }
-
+  render() {}
 }
